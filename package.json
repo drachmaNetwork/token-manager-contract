@@ -3,10 +3,26 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "compile": "truffle compile",
+    "migrate:dev": "truffle migrate --reset --network development",
+    "test": "truffle test --debug --network development",
+    "flat": "scripts/flat.sh",
+    "coverage": "truffle run coverage --network coverage"
+  },
   "dependencies": {
     "@openzeppelin/contracts": "3.4.0",
     "erc-payable-token": "3.4.0",
     "eth-token-recover": "3.4.0",
-    "solc": "0.7.0"
+    "solc": "0.7.6",
+    "truffle-flattener": "^1.5.0"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.11",
+    "chai": "^4.3.4",
+    "coveralls": "^3.1.0",
+    "eth-gas-reporter": "^0.2.22",
+    "solidity-coverage": "^0.7.16",
+    "truffle-plugin-verify": "^0.5.8"
   }
 }
